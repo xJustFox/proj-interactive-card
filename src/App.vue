@@ -1,15 +1,15 @@
 <script>
-import AppCard from './components/AppCard.vue';
+import AppInteractiveCard from './components/AppInteractiveCard.vue';
 
 export default {
   components:{
-    AppCard,
+    AppInteractiveCard,
   }
 }
 </script>
 
 <template lang="html">
-<AppCard />
+<AppInteractiveCard />
 </template>
 
 <style lang="scss">
