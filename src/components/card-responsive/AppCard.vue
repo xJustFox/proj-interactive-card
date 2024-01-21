@@ -1,6 +1,14 @@
 <script>
+import { store } from '/src/store.js';
+
 export default {
-    name: 'AppCard'
+    name: 'AppCard',
+
+    data() {
+        return {
+            store,
+        }
+    },
 }
 </script>
 
@@ -12,17 +20,17 @@ export default {
                 <!-- Back Card -->
                 <div class="backCard">
                     <div class="textBackCard">
-                        <div class="cvcCard">000</div>
+                        <div class="cvcCard">{{store.cvc}}</div>
                     </div>
                 </div>
 
                 <!-- Front Card -->
                 <div class="frontCard" >
                     <div class="textFrontCard">
-                        <img class="logoCard" src="../assets/card-logo.svg" alt="">
-                        <div class="numberCard">1234 5678 9123 0000</div>
-                        <div class="nameCard">JANE APPLESEED</div>
-                        <div class="dateCard">00/00</div>
+                        <img class="logoCard" src="/src/assets/card-logo.svg" alt="">
+                        <div class="numberCard">{{store.number}}</div>
+                        <div class="nameCard">{{store.name}}</div>
+                        <div class="dateCard">{{store.month}}/{{store.year}}</div>
                     </div>
                 </div>
             </div>
@@ -74,13 +82,13 @@ export default {
             right: 70px;
 
             .logoCard{
-                width: 100px;
-                padding: 27px;
+                width: 90px;
+                padding: 18px;
             }
             .numberCard{
                 font-size: x-large;
                 position: absolute;
-                left: 27px;
+                left: 18px;
                 top: 55%;
             }
 
@@ -91,11 +99,11 @@ export default {
                 top: 80%;
             }
             .nameCard{
-                left: 27px;
+                left: 18px;
             }
 
             .dateCard{
-                right: 27px;
+                right: 18px;
             }
         }
 
