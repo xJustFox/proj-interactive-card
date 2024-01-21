@@ -10,3 +10,20 @@
 body{
     font-family: "Space Grotesk", sans-serif;
 }
+
+.form-control:focus{
+    box-shadow: none;
+}
+
+.form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: gray;
+    opacity: 1; /* Firefox */
+}
+
+.form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: gray;
+}
+
+.form-control::-ms-input-placeholder { /* Microsoft Edge */
+    color: gray;
+}
